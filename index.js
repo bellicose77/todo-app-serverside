@@ -15,7 +15,7 @@ client.connect(err => {
   async function run()
   {
       try{
-          
+        await client.connect(); 
       }
       finally {
         await client.close();
