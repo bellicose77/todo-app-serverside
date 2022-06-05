@@ -4,6 +4,7 @@ const cors = require('cors');
 
 const app = express();
 app.use(cors());
+app.use(express.json());
 const port = 5000;
 
 const uri = "mongodb+srv://TODOdb:WpK3TYgZfdkd5Rpx@cluster0.vtwog.mongodb.net/?retryWrites=true&w=majority";
@@ -16,7 +17,8 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
         const todo = database.collection("todo");
         console.log("hitted db")
         app.post('/task',(req,res)=>{
-            console.log("hitting ta post");
+            const todo = req.body;
+            console.log("hitting ta post",todo);
         })
       }
       finally {
