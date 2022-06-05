@@ -6,5 +6,9 @@ const port = 5000;
 app.get('/',(req,res)=>{
     res.send("hello world");
 });
+
+app.post('/task',(req,res)=>{
+    console.log("hitting ta post");
+})
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)})
