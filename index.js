@@ -14,8 +14,15 @@ client.connect(err => {
   });
   async function run()
   {
-      
+      try{
+          
+      }
+      finally {
+        await client.close();
+      }
+
   }
+  run().catch(console.dir);
 
 app.get('/',(req,res)=>{
     res.send("hello world");
