@@ -1,7 +1,9 @@
 const express = require('express');
 const { MongoClient} = require('mongodb');
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 const port = 5000;
 
 const uri = "mongodb+srv://TODOdb:WpK3TYgZfdkd5Rpx@cluster0.vtwog.mongodb.net/?retryWrites=true&w=majority";
