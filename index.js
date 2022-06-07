@@ -25,7 +25,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
         })
       }
       finally {
-        await client.close();
+        
       }
 
   }
