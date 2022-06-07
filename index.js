@@ -19,8 +19,9 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
         // console.log("hitted db")
         app.get('/tasks',async(req,res)=>{
           const result = todo.find({})
+          const cursor = await result.toArray()
           // res.send("hello world");
-          res.json(result);
+          res.json(cursor);
         })
         app.post('/task',async (req,res)=>{
             const dataInput = req.body;
