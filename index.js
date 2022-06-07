@@ -17,12 +17,15 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
         const database = client.db("todoDB");
         const todo = database.collection("todo");
         // console.log("hitted db")
+        app.get('/tasks',async(req,res)=>{
+          res.send("hello world");
+        })
         app.post('/task',async (req,res)=>{
             const dataInput = req.body;
             const result = await todo.insertOne(dataInput);
             console.log("hitting ta post",result);
             res.json(result);
-        })
+        });
       }
       finally {
         
