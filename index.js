@@ -31,7 +31,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
         });
 
         app.delete('/task/:id',async(req,res)=>{
-          
+          console.log("delete api");
         })
       }
       finally {
