@@ -29,6 +29,10 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
             console.log("hitting ta post",result);
             res.json(result);
         });
+
+        app.delete('/task/:id',async(req,res)=>{
+          
+        })
       }
       finally {
         
