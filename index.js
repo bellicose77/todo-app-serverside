@@ -38,7 +38,10 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
             console.log("hitting ta post",result);
             res.json(result);
         });
-
+        app.put('/update/:id',async(req,res)=>{
+          const updatevalue = req.body;
+          console.log(updatevalue);
+        })
         app.delete('/task/:id',async(req,res)=>{
          const id = req.params.id;
          const query = {_id:ObjectId(id)}
