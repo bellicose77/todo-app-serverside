@@ -26,6 +26,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
           res.json(cursor);
         })
         app.get('/task/:id',async(req,res)=>{
+          const id = req.params.id;
           
         })
         app.post('/task',async (req,res)=>{
