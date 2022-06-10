@@ -47,6 +47,8 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
           const updatedoc = {
             $set:{
               name:updatevalue.name,
+              email:updatevalue.email,
+              password:updatevalue.password
               
             }
           }
