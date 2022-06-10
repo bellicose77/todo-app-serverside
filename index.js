@@ -25,6 +25,9 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
           // res.send("hello world");
           res.json(cursor);
         })
+        app.get('/task/:id',async(req,res)=>{
+          
+        })
         app.post('/task',async (req,res)=>{
             const dataInput = req.body;
             const result = await todo.insertOne(dataInput);
