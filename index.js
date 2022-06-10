@@ -44,6 +44,12 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
           const updatevalue = req.body;
           const query = {_id:ObjectId(id)}
           const options = {upsert:true};
+          const updatedoc = {
+            $set:{
+              name:updatevalue.name,
+              
+            }
+          }
           //console.log(updatevalue);
         });
 
