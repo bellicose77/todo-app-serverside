@@ -27,7 +27,10 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
         })
         app.get('/task/:id',async(req,res)=>{
           const id = req.params.id;
-          
+          const query = {_id:ObjectId(id)};
+          const result = await todo.findOne(query);
+          res.json(result);
+
         })
         app.post('/task',async (req,res)=>{
             const dataInput = req.body;
