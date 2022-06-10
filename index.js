@@ -53,7 +53,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
             },
           };
           const result = await todo.updateOne(query,updatedoc,options)
-          //console.log(updatevalue);
+          res.json(result);
         });
 
         app.delete('/task/:id',async(req,res)=>{
