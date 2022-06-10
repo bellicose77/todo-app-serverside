@@ -50,8 +50,9 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
               email:updatevalue.email,
               password:updatevalue.password
               
-            }
-          }
+            },
+          };
+          const result = await todo.updateOne(query,updatedoc,options)
           //console.log(updatevalue);
         });
 
